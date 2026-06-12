@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Digital Marketing Masterclass | Akavin Academy</title>
+    <!-- Google Fonts & Simple CSS Reset -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #1e293b;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* header */
+        .main-header {
+            background: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.03);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: rgba(255,255,255,0.96);
+            backdrop-filter: blur(2px);
+        }
+
+        .header-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 16px 0;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #0f2b3d, #1e4a6e);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 800;
+            font-size: 22px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+
+        .logo-text h1 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: -0.3px;
+            background: linear-gradient(120deg, #0f2b3d, #2c6e9e);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .logo-text span {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #4b5563;
+            display: block;
+        }
+
+        .contact-info {
+            text-align: right;
+            background: #f8fafc;
+            padding: 8px 18px;
+            border-radius: 60px;
+        }
+
+        .contact-info p {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .contact-info small {
+            font-size: 0.75rem;
+            color: #2c6e9e;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(105deg, #f0f9ff 0%, #e6f0f5 100%);
+            padding: 56px 0 48px;
+            border-bottom: 1px solid #dce7ef;
+        }
+
+        .hero-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-badge {
+            background: #1e4a6e20;
+            color: #1e4a6e;
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #0c2e42;
+        }
+
+        .hero-highlight {
+            color: #1e6f9f;
+            border-bottom: 3px solid #ffb347;
+            display: inline-block;
+        }
+
+        .hero-desc {
+            font-size: 1.1rem;
+            color: #2c3e50;
+            margin-bottom: 28px;
+            max-width: 90%;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 28px;
+            margin-top: 20px;
+        }
+
+        .stat {
+            font-weight: 700;
+        }
+
+        .stat span {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #0f2b3d;
+        }
+
+        .hero-card {
+            background: white;
+            padding: 32px 28px;
+            border-radius: 32px;
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 380px;
+            text-align: center;
+        }
+
+        .price {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: #1e4a6e;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff9f2e;
+            color: #1e2a3a;
+            font-weight: 700;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: 0.2s;
+            width: 100%;
+            margin-top: 16px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background: #ffb347;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+        }
+
+        /* sections */
+        section {
+            padding: 64px 0;
+            border-bottom: 1px solid #eef2f6;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 70px;
+            height: 4px;
+            background: #ff9f2e;
+            border-radius: 4px;
+        }
+
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .module-card {
+            background: #fefdf9;
+            padding: 20px;
+            border-radius: 24px;
+            border: 1px solid #e9edf2;
+            transition: all 0.2s;
+        }
+
+        .module-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1e4a6e;
+        }
+
+        .module-card ul {
+            padding-left: 20px;
+            font-size: 0.9rem;
+            color: #2d3e50;
+        }
+
+        .module-card li {
+            margin: 6px 0;
+        }
+
+        .two-columns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: space-between;
+        }
+
+        .who-box, .includes-box {
+            flex: 1;
+            background: #f8fafc;
+            padding: 28px;
+            border-radius: 28px;
+        }
+
+        .client-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 24px;
+            margin-top: 20px;
+        }
+
+        .client-card {
+            background: white;
+            border-radius: 24px;
+            padding: 20px;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s;
+        }
+        .client-card h4 {
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: #0f2b3d;
+        }
+        .client-detail {
+            font-size: 0.85rem;
+            color: #4b5563;
+            margin-top: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 16px;
+        }
+        .faq-question {
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+        .faq-answer {
+            padding-top: 10px;
+            color: #334155;
+        }
+        .footer {
+            background: #0b2a3b;
+            color: #cbd5e1;
+            padding: 40px 0;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2rem; }
+            .hero-grid { flex-direction: column; }
+            .hero-card { max-width: 100%; }
+            .section-title { font-size: 1.8rem; }
+        }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #ff9f2e;
+            color: #ff9f2e;
+        }
+        .btn-outline:hover {
+            background: #ff9f2e;
+            color: #1e2a3a;
+        }
+        .small-note {
+            font-size: 0.8rem;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-flex">
+            <div class="logo-area">
+                <div class="logo-icon">AK</div>
+                <div class="logo-text">
+                    <h1>Akavin Academy</h1>
+                    <span>Digital Excellence Hub</span>
+                </div>
+            </div>
+            <div class="contact-info">
+                <p>📞 +998 71 123 4567</p>
+                <small>✉️ hello@akavin.online | 📍 Tashkent, Uzbekistan</small>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge">🌟 LIVE & INTERACTIVE • CERTIFICATION</div>
+                <h1>Digital Marketing <span class="hero-highlight">Masterclass</span><br>Become a Certified Expert</h1>
+                <p class="hero-desc">Comprehensive 1-day training: SEO, Social Media, PPC, Content Strategy & Analytics. Gain practical skills to accelerate your business or career.</p>
+                <div class="hero-stats">
+                    <div class="stat"><span>1000+</span><br>students trained</div>
+                    <div class="stat"><span>98%</span><br>satisfaction rate</div>
+                    <div class="stat"><span>1 day</span><br>intensive</div>
+                </div>
+            </div>
+            <div class="hero-card">
+                <div class="price">$1,795</div>
+                <p style="margin: 8px 0;">incl. digital delegate pack & certificate</p>
+                <a href="#" class="btn" id="registerBtn">📅 Enquire Now →</a>
+                <p class="small-note" style="margin-top: 12px;">Live online or in-class • Flexible schedules</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Modules Outline -->
+        <section>
+            <h2 class="section-title">Course Modules</h2>
+            <div class="modules-grid">
+                <div class="module-card"><h3>📌 Module 1: Digital Marketing</h3><ul><li>Evolution & impact</li><li>Digital landscape</li></ul></div>
+                <div class="module-card"><h3>🎯 Module 2: Planning & Strategy</h3><ul><li>Campaign planning</li><li>Multi-channel marketing</li></ul></div>
+                <div class="module-card"><h3>💡 Module 3: Customer Experience & UX</h3><ul><li>Wireframes, usability testing</li><li>CX marketing</li></ul></div>
+                <div class="module-card"><h3>📱 Module 4: Mobile Marketing</h3><ul><li>App vs mobile site</li><li>Conversion optimisation</li></ul></div>
+                <div class="module-card"><h3>✍️ Module 5: Content Strategy</h3><ul><li>Inbound marketing & SEO</li><li>Content plan</li></ul></div>
+                <div class="module-card"><h3>🌐 Module 6: Social Media</h3><ul><li>FB, LinkedIn, X, YouTube</li><li>Pitfalls & successes</li></ul></div>
+                <div class="module-card"><h3>✉️ Module 7: Email Marketing</h3><ul><li>Permission & list building</li><li>Case studies</li></ul></div>
+                <div class="module-card"><h3>🔍 Module 8: SEO & PPC</h3><ul><li>Search engine marketing</li><li>Integration strategies</li></ul></div>
+                <div class="module-card"><h3>📈 Module 9: ROI & Integration</h3><ul><li>Online & offline synergy</li><li>Real-world campaigns</li></ul></div>
+            </div>
+        </section>
+
+        <!-- Who should attend + What's included (No syllabus download) -->
+        <div class="two-columns">
+            <div class="who-box">
+                <h3 style="font-size: 1.6rem; margin-bottom: 16px;">👥 Who should attend?</h3>
+                <ul style="margin-left: 20px; line-height: 1.8;">
+                    <li>Advertising & PR Professionals</li>
+                    <li>Social Media Managers</li>
+                    <li>E-commerce & Marketing Consultants</li>
+                    <li>Digital Marketers, Content Creators</li>
+                    <li>Entrepreneurs & Business Owners</li>
+                </ul>
+                <p style="margin-top: 20px;"><strong>No prerequisites</strong> – open to all levels.</p>
+            </div>
+            <div class="includes-box">
+                <h3 style="font-size: 1.6rem; margin-bottom: 16px;">🎁 What’s included?</h3>
+                <ul style="margin-left: 20px; line-height: 1.8;">
+                    <li>World-Class training by industry experts</li>
+                    <li>Digital Marketing Certificate (recognised)</li>
+                    <li>Digital Delegate Pack & MyTKA portal access</li>
+                    <li>Interactive live sessions + real-world case studies</li>
+                    <li>Post-course resources and AI-supported LMS</li>
+                </ul>
+                <p style="margin-top: 20px;">✔ Flexible online / in-person formats • small class sizes</p>
+            </div>
+        </div>
+
+        <!-- CLIENT LIST SECTION (MSME shop details) replaces download syllabus -->
+        <section style="border-bottom: 1px solid #eef2f6;">
+            <h2 class="section-title">🏪 Our MSME Clients – Trusted by Growing Shops</h2>
+            <p style="margin-bottom: 32px; max-width: 750px;">From local artisans to digital-first retailers, these MSMEs have transformed their business with our Digital Marketing Masterclass. Real results, real growth.</p>
+            <div class="client-list">
+                <div class="client-card">
+                    <h4>📦 Tashkent Treasures</h4>
+                    <div class="client-detail"><span>🏷️ Handicrafts & souvenirs</span><span>📍 Chorsu Bazaar, Tashkent</span><span>📈 +210% online reach after course</span><span>👥 8 employees</span></div>
+                </div>
+                <div class="client-card">
+                    <h4>☕ Silk Road Roastery</h4>
+                    <div class="client-detail"><span>🏷️ Specialty coffee & beans</span><span>📍 Samarkand city</span><span>📈 SEO + email campaigns boosted sales 65%</span><span>👥 12 staff</span></div>
+                </div>
+                <div class="client-card">
+                    <h4>👗 Modern Nomad Fashion</h4>
+                    <div class="client-detail"><span>🏷️ Ethical clothing brand</span><span>📍 Bukhara</span><span>📈 Instagram growth + social media mastery</span><span>👥 5 partners</span></div>
+                </div>
+                <div class="client-card">
+                    <h4>📱 DevOn IT Solutions</h4>
+                    <div class="client-detail"><span>🏷️ IT & web dev agency</span><span>📍 Tashkent IT Park</span><span>📈 PPC campaigns generated 40+ leads/month</span><span>👥 22 employees</span></div>
+                </div>
+                <div class="client-card">
+                    <h4>🍯 Honey & Spice Uzbekistan</h4>
+                    <div class="client-detail"><span>🏷️ Organic honey, spices</span><span>📍 Fergana Valley</span><span>📈 Email marketing ROAS 4.2x</span><span>👥 6 staff</span></div>
+                </div>
+                <div class="client-card">
+                    <h4>🚲 Green Cargo Logistics</h4>
+                    <div class="client-detail"><span>🏷️ Last-mile delivery SME</span><span>📍 Andijan</span><span>📈 Local SEO improved visibility 87%</span><span>👥 15 delivery partners</span></div>
+                </div>
+            </div>
+            <p style="margin-top: 28px; text-align: center; background: #fef5e8; padding: 12px; border-radius: 50px;"><strong>⭐ 500+ MSMEs trained across Central Asia — join our success stories ⭐</strong></p>
+        </section>
+
+        <!-- course overview / objectives and FAQ (shortened, preserves original tone) -->
+        <div class="two-columns" style="margin-top: 20px;">
+            <div>
+                <h3 class="section-title" style="margin-bottom: 24px;">🎯 Course Objectives</h3>
+                <ul style="margin-left: 20px; line-height: 1.8;">
+                    <li>Master digital marketing fundamentals and evolution</li>
+                    <li>Build SEO, PPC, and social media strategies</li>
+                    <li>Execute integrated campaigns for maximum ROI</li>
+                    <li>Optimise customer experience & mobile marketing</li>
+                    <li>Analyse metrics, conversion optimisation</li>
+                </ul>
+                <p style="margin-top: 20px;">✔ Upon completion: receive official Digital Marketing certification to enhance career credibility.</p>
+            </div>
+            <div>
+                <h3 class="section-title" style="margin-bottom: 24px;">❓ Quick FAQs</h3>
+                <div class="faq-item">
+                    <div class="faq-question">📌 How long is the masterclass?<span style="font-weight: 400;">+</span></div>
+                    <div class="faq-answer">1 full day (8 hours) with expert-led interactive sessions.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">💻 Is it available online?</div>
+                    <div class="faq-answer">Yes, live instructor-led online or classroom in Uzbekistan.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">🏅 Is there an exam?</div>
+                    <div class="faq-answer">No formal exam; assessment via practical exercises and activities.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">💰 What's the payment & corporate training?</div>
+                    <div class="faq-answer">Flexible pricing, group discounts, in-house training available. Best price guarantee.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- training delivery features (online self-paced, global) -->
+        <section>
+            <h2 class="section-title">🚀 Flexible Learning Journeys</h2>
+            <div class="modules-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px,1fr));">
+                <div class="module-card"><h3>🌍 Live Online</h3><p>Interactive classes with global experts, real-time feedback.</p></div>
+                <div class="module-card"><h3>🏢 Classroom (Tashkent)</h3><p>State-of-the-art venues, small groups, direct mentorship.</p></div>
+                <div class="module-card"><h3>📚 Self-Paced Plus</h3><p>24/7 LMS access + AI support + weekly tutor sessions.</p></div>
+                <div class="module-card"><h3>🏷️ Corporate Onsite</h3><p>Tailored curriculum for your team, best price guarantee.</p></div>
+            </div>
+        </section>
+
+        <!-- Customer reviews snippet -->
+        <section style="background: #fafcff; border-radius: 32px; margin: 32px 0 32px 0; border: none;">
+            <h2 class="section-title">📣 What Our Alumni Say</h2>
+            <div class="client-list" style="grid-template-columns: repeat(auto-fill, minmax(280px,1fr));">
+                <div class="client-card">⭐️⭐️⭐️⭐️⭐️ <br> “Mridula was an excellent trainer! The course was engaging and full of practical insights. My ROI-focused strategies changed completely.” – Lucy Scodeller</div>
+                <div class="client-card">⭐️⭐️⭐️⭐️⭐️ <br>“Very engaging style, not a second of boredom. Real examples and case studies from industry made it worthwhile.” – Romana Koudelkova</div>
+                <div class="client-card">⭐️⭐️⭐️⭐️⭐️ <br>“Thomas Duncan was outstanding, delivered in an effective way. Our team loved the SEO module.” – Philip Benson</div>
+            </div>
+        </section>
+
+        <!-- final call to action & contact -->
+        <div style="background: linear-gradient(120deg, #eef2ff, #ffffff); border-radius: 48px; padding: 48px 32px; margin: 48px 0; text-align: center;">
+            <h2 style="font-size: 2rem;">Ready to Master Digital Marketing?</h2>
+            <p style="margin: 16px auto; max-width: 600px;">Get certified, build high-impact campaigns, and become a digital leader. Limited seats available for upcoming batches.</p>
+            <a href="#" class="btn" style="width: auto; padding: 14px 48px; display: inline-block;" id="contactBtn">📞 Request a callback →</a>
+            <p class="small-note" style="margin-top: 24px;">Contact us directly: +998 71 123 4567 | hello@akavin.online</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Akavin Academy — powered by www.akavin.online. All rights reserved. | Digital Marketing Masterclass Uzbekistan</p>
+            <p style="margin-top: 12px; font-size: 0.85rem;">📍 Head Office: Tashkent, Uzbekistan | Trusted training partner for 190+ countries</p>
+        </div>
+    </footer>
+
+    <script>
+        // simple interactive alert for buttons (dummy demonstration)
+        document.getElementById('registerBtn')?.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert("📧 Thank you for your interest! Our training experts will reach out within 24 hours (hello@akavin.online).");
+        });
+        document.getElementById('contactBtn')?.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert("📞 Request a callback: Please share your number via email or call +998 71 123 4567 directly.");
+        });
+        // optional faq toggles (simple)
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(q => {
+            q.style.cursor = 'pointer';
+            q.addEventListener('click', () => {
+                const answer = q.nextElementSibling;
+                if (answer.style.display === 'none' || !answer.style.display) {
+                    answer.style.display = 'block';
+                } else {
+                    answer.style.display = 'none';
+                }
+            });
+            // initially all answers visible
+            const ans = q.nextElementSibling;
+            if(ans) ans.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
